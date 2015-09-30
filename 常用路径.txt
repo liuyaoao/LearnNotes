@@ -1,0 +1,30 @@
+C:\Documents and Settings\liuyaoao\Local Settings\Application Data\Adobe\Flash CS6\zh_CN\Configuration\Commands   //存放jsfl脚本的文件夹。
+
+c:\documents and settings\liuyaoao\my documents\visual studio 2010\Projects
+
+C:\WINDOWS\system32\drivers\etc    :hosts文件
+
+
+C:\Documents and Settings\liuyaoao\Local Settings\Application Data\Adobe\Flash CS6\zh_CN\Configuration\WindowSWF    //添加项目插件的文件夹。
+
+C:\Users\liuyaoao\AppData\Local\MyEclipse   MyEclipse安装目录。
+
+
+\\10.17.1.2\root  ..虚拟机资源。
+
+
+Flash CS6发布时提示内存不足要修改 jvm.ini文件修改内存。
+
+
+Cocos Code IDE 项目工作空间路径： E:\liuyaoao\Documents\Cocos
+
+
+eclipse for android 开发的项目工作空间路径：  E:\liuyaoao\android_workspace
+
+数据库连接：
+Pjf_local 	ip:10.17.1.118 ;   user: pjfdev	 ;  password:pjfdevadmin  ;
+
+Pjf_test 	ip:10.18.12.69 ;   user: devpjf ;  password:000000  ;
+
+
+金山词霸的安装目录：C:\Program Files (x86)\Kingsoft\PowerWord 2005 ；金山词霸鼠标屏幕取词会关闭某些软件的问题，用这个补丁（XdictGrb.dll）替换掉安装目录的同名文件。（注意要先安装：Powerword_2005_SP1补丁才行。不然会有报错。）
