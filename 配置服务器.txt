@@ -1,0 +1,42 @@
+1.配置hosts(C:\Windows\System32\driver\etc\)
+指向本地127.0.0.1	svm.fourb.info
+
+2.配置nginx.conf(E:\program\nginx\conf\)
+server{
+		listen 80;
+        server_name svm.fourb.info;
+
+        location / {
+           root E:\FB\svm\src\main\webapp;
+           proxy_pass http://svm.fourb.info:8080;
+		}
+
+		location ~ \.(jsp|action)$ {
+			root E:\FB\svm\src\main\webapp;
+			proxy_pass http://svm.fourb.info:8080;
+		}
+
+		location ~ \.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|bm)$ {
+			root E:\FB\svm\src\main\webapp;
+			expires 7d;
+		}
+}
+
+3.配置build-projects.bat(E:\program\deploy\new\)
+
+echo.&echo 开始build svm项目.................
+rem call %siteBuildBat% E:\FB\svm
+echo.&echo 已完成build svm项目
+
+去掉rem
+
+4.配置server.xml(E:\program\tomcat8\conf\server.xml)
+<Host name="svm.fourb.info" appBase="" unpackWARs="true"  autoDeploy="true">
+    <Context path="" docBase="E:\FB\svm\src\main\webapp" reloadable="false"/> 
+</Host>
+
+5.配置settings.xml(E:\program\maven\conf\settings.xml)		新增站点需要配置maven连接数据库
+<svm.db.url>jdbc:mysql://10.18.20.5:3306/svm?autoReconnect=true</svm.db.url>
+                <svm.db.username>fourbdev</svm.db.username>
+                
+<svm.db.password>fbdevadmin</svm.db.password>
