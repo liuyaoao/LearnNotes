@@ -1,0 +1,15 @@
+1、dos下按tab键不能实现文件名自动补全了：
+修改注册表：
+HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor 
+里面的CompletionChar和PathCompletionChar都改成09
+或者：
+将以下内容保存为 reg文件，运行
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor]
+"AutoRun"=""
+"CompletionChar"=dword:00000009
+"DefaultColor"=dword:00000000
+"EnableExtensions"=dword:00000001
+"PathCompletionChar"=dword:00000009
+
+导入注册表后，在DOS方式下可以实现像linux下的用TAB键文件名和目录名的自动补全。
